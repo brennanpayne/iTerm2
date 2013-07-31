@@ -153,6 +153,7 @@ typedef enum { CURSOR_UNDERLINE, CURSOR_VERTICAL, CURSOR_BOX } ITermCursorType;
     IBOutlet NSPopUpButton* hotkeyBookmark;
     NSString* defaultHotKeyBookmarkGuid;
 
+
     // Enable bonjour
     IBOutlet NSButton *enableBonjour;
     BOOL defaultEnableBonjour;
@@ -320,6 +321,9 @@ typedef enum { CURSOR_UNDERLINE, CURSOR_VERTICAL, CURSOR_BOX } ITermCursorType;
     int defaultHotkeyChar;
     int defaultHotkeyCode;
     int defaultHotkeyModifiers;
+    
+    // keep hotkey window on top
+    IBOutlet NSButton* keepWindowOnTop;
 
     // Save copy paste history
     IBOutlet NSButton *savePasteHistory;
@@ -513,6 +517,7 @@ typedef enum { CURSOR_UNDERLINE, CURSOR_VERTICAL, CURSOR_BOX } ITermCursorType;
     IBOutlet NSMatrix *optionKeySends;
     IBOutlet NSMatrix *rightOptionKeySends;
     IBOutlet NSTokenField* tags;
+
 
     IBOutlet NSPopUpButton* presetsPopupButton;
     IBOutlet NSTextField*   presetsErrorLabel;

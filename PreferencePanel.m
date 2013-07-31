@@ -1462,6 +1462,7 @@ static float versionNumber;
         [hotkeyField setStringValue:@""];
     }
     [hotkeyField setEnabled:defaultHotkey];
+    
     [hotkeyLabel setTextColor:defaultHotkey ? [NSColor blackColor] : [NSColor disabledControlTextColor]];
     [hotkeyTogglesWindow setEnabled:defaultHotkey];
     [hotkeyBookmark setEnabled:(defaultHotkey && defaultHotkeyTogglesWindow)];
@@ -1795,6 +1796,8 @@ static float versionNumber;
         [hotkeyLabel setTextColor:defaultHotkey ? [NSColor blackColor] : [NSColor disabledControlTextColor]];
         [hotkeyTogglesWindow setEnabled:defaultHotkey];
         [hotkeyBookmark setEnabled:(defaultHotkey && defaultHotkeyTogglesWindow)];
+        
+
 
         if (prefs &&
             defaultCheckTestRelease != ([checkTestRelease state] == NSOnState)) {
@@ -2872,6 +2875,8 @@ static float versionNumber;
         }
     [blurRadius setFloatValue:[dict objectForKey:KEY_BLUR_RADIUS] ? [[dict objectForKey:KEY_BLUR_RADIUS] floatValue] : 2.0];
     [blur setState:[[dict objectForKey:KEY_BLUR] boolValue] ? NSOnState : NSOffState];
+    [keepWindowOnTop setEnabled:defaultHotkey];
+    
     if ([dict objectForKey:KEY_ASCII_ANTI_ALIASED]) {
         [asciiAntiAliased setState:[[dict objectForKey:KEY_ASCII_ANTI_ALIASED] boolValue] ? NSOnState : NSOffState];
     } else {
@@ -2945,6 +2950,8 @@ static float versionNumber;
     // "delete sends ^h" checkbox is correct
     BOOL sendCH = [self _deleteSendsCtrlHInBookmark:dict];
     [deleteSendsCtrlHButton setState:sendCH ? NSOnState : NSOffState];
+    
+
 
     // Session tab
     [promptBeforeClosing_ selectCellWithTag:[[dict objectForKey:KEY_PROMPT_CLOSE] intValue]];
@@ -3306,6 +3313,7 @@ static float versionNumber;
     [newDict setObject:[NSNumber numberWithFloat:[blend floatValue]] forKey:KEY_BLEND];
     [newDict setObject:[NSNumber numberWithFloat:[blurRadius floatValue]] forKey:KEY_BLUR_RADIUS];
     [newDict setObject:[NSNumber numberWithBool:([blur state]==NSOnState)] forKey:KEY_BLUR];
+    [newDict setObject:[NSNumber numberWithBool:([keepWindowOnTop state]==NSOnState)] forKey:KEY_KEEP_WINDOW_ON_TOP];
     [newDict setObject:[NSNumber numberWithBool:([asciiAntiAliased state]==NSOnState)] forKey:KEY_ASCII_ANTI_ALIASED];
     [newDict setObject:[NSNumber numberWithBool:([nonasciiAntiAliased state]==NSOnState)] forKey:KEY_NONASCII_ANTI_ALIASED];
     [self _updateFontsDisplay];
@@ -3381,6 +3389,7 @@ static float versionNumber;
         BOOL sendCH = [self _deleteSendsCtrlHInBookmark:newDict];
         [deleteSendsCtrlHButton setState:sendCH ? NSOnState : NSOffState];
     }
+    
 
     // Session tab
     [newDict setObject:[NSNumber numberWithInt:[[promptBeforeClosing_ selectedCell] tag]]
