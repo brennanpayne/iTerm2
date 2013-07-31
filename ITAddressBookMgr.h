@@ -125,6 +125,7 @@
 #define KEY_NONASCII_ANTI_ALIASED  @"Non-ASCII Anti Aliased"
 #define KEY_BACKGROUND_IMAGE_LOCATION @"Background Image Location"
 #define KEY_BACKGROUND_IMAGE_TILED @"Background Image Is Tiled"
+#define KEY_KEEP_WINDOW_ON_TOP     @"Keep Window on top"
 
 // Terminal
 #define KEY_DISABLE_WINDOW_RESIZING           @"Disable Window Resizing"
