@@ -1588,6 +1588,7 @@ static NSString * const kRebuildColorPresetsMenuNotification = @"kRebuildColorPr
     [dict setObject:[NSNumber numberWithFloat:0.5] forKey:KEY_BLEND];
     [dict setObject:[NSNumber numberWithFloat:2.0] forKey:KEY_BLUR_RADIUS];
     [dict setObject:[NSNumber numberWithBool:YES] forKey:KEY_BLUR];
+    [dict setObject:[NSNumber numberWithBool:YES] forKey:KEY_KEEP_WINDOW_ON_TOP];
     [dict setObject:[NSNumber numberWithInt:-1] forKey:KEY_SCREEN];
     [dict setObject:[NSNumber numberWithInt:-1] forKey:KEY_SPACE];
     [dict setObject:@"" forKey:KEY_SHORTCUT];
@@ -2882,7 +2883,7 @@ static NSString * const kRebuildColorPresetsMenuNotification = @"kRebuildColorPr
         }
     [blurRadius setFloatValue:[dict objectForKey:KEY_BLUR_RADIUS] ? [[dict objectForKey:KEY_BLUR_RADIUS] floatValue] : 2.0];
     [blur setState:[[dict objectForKey:KEY_BLUR] boolValue] ? NSOnState : NSOffState];
-    [keepWindowOnTop setEnabled:defaultHotkey];
+    [keepWindowOnTop setState:[[dict objectForKey:KEY_KEEP_WINDOW_ON_TOP] boolValue] ? NSOnState : NSOffState];
     
     if ([dict objectForKey:KEY_ASCII_ANTI_ALIASED]) {
         [asciiAntiAliased setState:[[dict objectForKey:KEY_ASCII_ANTI_ALIASED] boolValue] ? NSOnState : NSOffState];
@@ -4336,6 +4337,7 @@ static NSString * const kRebuildColorPresetsMenuNotification = @"kRebuildColorPr
         KEY_BLEND,
         KEY_BLUR_RADIUS,
         KEY_BLUR,
+        KEY_KEEP_WINDOW_ON_TOP,
         KEY_BACKGROUND_IMAGE_LOCATION,
         KEY_BACKGROUND_IMAGE_TILED,
         KEY_SYNC_TITLE,

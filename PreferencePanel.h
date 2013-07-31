@@ -322,9 +322,6 @@ typedef enum { CURSOR_UNDERLINE, CURSOR_VERTICAL, CURSOR_BOX } ITermCursorType;
     int defaultHotkeyCode;
     int defaultHotkeyModifiers;
     
-    // keep hotkey window on top
-    IBOutlet NSButton* keepWindowOnTop;
-
     // Save copy paste history
     IBOutlet NSButton *savePasteHistory;
     BOOL defaultSavePasteHistory;
@@ -464,6 +461,7 @@ typedef enum { CURSOR_UNDERLINE, CURSOR_VERTICAL, CURSOR_BOX } ITermCursorType;
     IBOutlet NSSlider *blend;
     IBOutlet NSButton* blur;
     IBOutlet NSSlider *blurRadius;
+    IBOutlet NSButton* keepWindowOnTop;
     IBOutlet NSButton* asciiAntiAliased;
     IBOutlet NSButton* nonasciiAntiAliased;
     IBOutlet NSButton* backgroundImage;
