@@ -336,6 +336,10 @@ typedef enum { CURSOR_UNDERLINE, CURSOR_VERTICAL, CURSOR_BOX } ITermCursorType;
 
     IBOutlet NSTabView* bookmarksSettingsTabViewParent;
     IBOutlet NSTabViewItem* bookmarkSettingsGeneralTab;
+    
+    // Keep Window On Top
+    IBOutlet NSButton* keepWindowOnTop;
+    bool defaultKeepWindowOnTop;
 
     NSUserDefaults *prefs;
 
@@ -461,7 +465,6 @@ typedef enum { CURSOR_UNDERLINE, CURSOR_VERTICAL, CURSOR_BOX } ITermCursorType;
     IBOutlet NSSlider *blend;
     IBOutlet NSButton* blur;
     IBOutlet NSSlider *blurRadius;
-    IBOutlet NSButton* keepWindowOnTop;
     IBOutlet NSButton* asciiAntiAliased;
     IBOutlet NSButton* nonasciiAntiAliased;
     IBOutlet NSButton* backgroundImage;
@@ -687,6 +690,7 @@ typedef enum {
 - (int)hotkeyCode;
 - (int)hotkeyModifiers;
 - (NSTextField*)hotkeyField;
+- (BOOL)keepWindowOnTop;
 
 - (BOOL)showWindowBorder;
 - (BOOL)lionStyleFullscreen;

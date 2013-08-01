@@ -2151,6 +2151,11 @@ static NSString * const kRebuildColorPresetsMenuNotification = @"kRebuildColorPr
     return defaultHotkey;
 }
 
+- (BOOL)keepWindowOnTop
+{
+    return [keepWindowOnTop state];
+}
+
 - (short)hotkeyChar
 {
     return defaultHotkeyChar;

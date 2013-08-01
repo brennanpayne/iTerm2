@@ -368,6 +368,14 @@ NSString *sessionsKey = @"sessions";
             [[self window] setBottomCornerRounded:NO];
     }
 
+    if ([[PreferencePanel sharedInstance] keepWindowOnTop]){
+        [[self window] setLevel:NSFloatingWindowLevel];
+        NSLog(@"true!");
+    }else{
+        NSLog(@"false!");
+
+    }
+
     // create the tab bar control
     [[self window] setContentView:background_];
     [background_ release];

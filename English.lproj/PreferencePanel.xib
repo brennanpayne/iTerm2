@@ -6288,7 +6288,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 																	<string key="NSFrame">{{296, 256}, {187, 96}}</string>
 																	<reference key="NSSuperview" ref="678134053"/>
 																	<reference key="NSWindow"/>
-																	<reference key="NSNextKeyView" ref="543227551"/>
+																	<reference key="NSNextKeyView" ref="198047468"/>
 																	<bool key="NSEnabled">YES</bool>
 																	<object class="NSImageCell" key="NSCell" id="292498994">
 																		<int key="NSCellFlags">134217728</int>
@@ -6642,7 +6642,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 																	</object>
 																	<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 																</object>
-																<object class="NSButton" id="543227551">
+																<object class="NSButton" id="198047468">
 																	<reference key="NSNextResponder" ref="678134053"/>
 																	<int key="NSvFlags">268</int>
 																	<string key="NSFrame">{{43, 227}, {151, 18}}</string>
@@ -6650,12 +6650,12 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 																	<reference key="NSWindow"/>
 																	<reference key="NSNextKeyView" ref="256596671"/>
 																	<bool key="NSEnabled">YES</bool>
-																	<object class="NSButtonCell" key="NSCell" id="960543215">
+																	<object class="NSButtonCell" key="NSCell" id="594088591">
 																		<int key="NSCellFlags">-2080374784</int>
 																		<int key="NSCellFlags2">0</int>
 																		<string key="NSContents">Keep window on top</string>
 																		<reference key="NSSupport" ref="966507434"/>
-																		<reference key="NSControlView" ref="543227551"/>
+																		<reference key="NSControlView" ref="198047468"/>
 																		<int key="NSButtonFlags">1211912448</int>
 																		<int key="NSButtonFlags2">2</int>
 																		<reference key="NSNormalImage" ref="414636409"/>
@@ -17612,7 +17612,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 					<object class="IBActionConnection" key="connection">
 						<string key="label">bookmarkSettingChanged:</string>
 						<reference key="source" ref="155244235"/>
-						<reference key="destination" ref="543227551"/>
+						<reference key="destination" ref="198047468"/>
 					</object>
 					<int key="connectionID">6408</int>
 				</object>
@@ -17620,7 +17620,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">keepWindowOnTop</string>
 						<reference key="source" ref="155244235"/>
-						<reference key="destination" ref="543227551"/>
+						<reference key="destination" ref="198047468"/>
 					</object>
 					<int key="connectionID">6409</int>
 				</object>
@@ -24823,7 +24823,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							<reference ref="983808788"/>
 							<reference ref="360235832"/>
 							<reference ref="256596671"/>
-							<reference ref="543227551"/>
+							<reference ref="198047468"/>
 						</object>
 						<reference key="parent" ref="262523333"/>
 					</object>
@@ -27950,17 +27950,17 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">6406</int>
-						<reference key="object" ref="543227551"/>
+						<reference key="object" ref="198047468"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="960543215"/>
+							<reference ref="594088591"/>
 						</object>
 						<reference key="parent" ref="678134053"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">6407</int>
-						<reference key="object" ref="960543215"/>
-						<reference key="parent" ref="543227551"/>
+						<reference key="object" ref="594088591"/>
+						<reference key="parent" ref="198047468"/>
 					</object>
 				</object>
 			</object>
@@ -30740,7 +30740,6 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							<string>cancelCopyBookmarks:</string>
 							<string>changeProfile:</string>
 							<string>closeAdvancedWorkingDirSheet:</string>
-							<string>closeCurrentSession:</string>
 							<string>closeKeyMapping:</string>
 							<string>closeSmartSelectionSheet:</string>
 							<string>closeTriggersSheet:</string>
@@ -30769,12 +30768,9 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							<string>showGlobalTabView:</string>
 							<string>showKeyboardTabView:</string>
 							<string>showMouseTabView:</string>
-							<string>useFactoryGlobalKeyMappings:</string>
 						</object>
 						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
-							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -30829,7 +30825,6 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							<string>cancelCopyBookmarks:</string>
 							<string>changeProfile:</string>
 							<string>closeAdvancedWorkingDirSheet:</string>
-							<string>closeCurrentSession:</string>
 							<string>closeKeyMapping:</string>
 							<string>closeSmartSelectionSheet:</string>
 							<string>closeTriggersSheet:</string>
@@ -30858,7 +30853,6 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							<string>showGlobalTabView:</string>
 							<string>showKeyboardTabView:</string>
 							<string>showMouseTabView:</string>
-							<string>useFactoryGlobalKeyMappings:</string>
 						</object>
 						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -30900,10 +30894,6 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">closeAdvancedWorkingDirSheet:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">closeCurrentSession:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
@@ -31016,10 +31006,6 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">showMouseTabView:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">useFactoryGlobalKeyMappings:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 						</object>
