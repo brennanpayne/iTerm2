@@ -2153,7 +2153,10 @@ static NSString * const kRebuildColorPresetsMenuNotification = @"kRebuildColorPr
 
 - (BOOL)keepWindowOnTop
 {
-    return [keepWindowOnTop state];
+    //return [[ProfileModel sharedInstance] getCurren]
+    //return [keepWindowOnTop state];
+    //NSString* guid = [bookmarksTableView selectedGuid];
+    //return [[[dataSource bookmarkWithGuid:guid] objectForKey:KEY_KEEP_WINDOW_ON_TOP] boolValue];
 }
 
 - (short)hotkeyChar

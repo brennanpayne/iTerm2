@@ -367,13 +367,13 @@ NSString *sessionsKey = @"sessions";
         if ([[self window] respondsToSelector:@selector(setBottomCornerRounded:)])
             [[self window] setBottomCornerRounded:NO];
     }
-
-    if ([[PreferencePanel sharedInstance] keepWindowOnTop]){
+    
+    PreferencePanel* pp = [PreferencePanel sharedInstance];
+    if ([pp keepWindowOnTop]){
         [[self window] setLevel:NSFloatingWindowLevel];
         NSLog(@"true!");
     }else{
         NSLog(@"false!");
-
     }
 
     // create the tab bar control
@@ -385,7 +385,6 @@ NSString *sessionsKey = @"sessions";
     tabBarControl = [[PSMTabBarControl alloc] initWithFrame:aRect];
 
     [tabBarControl retain];
-    PreferencePanel* pp = [PreferencePanel sharedInstance];
     [tabBarControl setModifier:[pp modifierTagToMask:[pp switchTabModifier]]];
     if ([[PreferencePanel sharedInstance] tabViewType] == PSMTab_BottomTab) {
         [tabBarControl setAutoresizingMask:(NSViewWidthSizable | NSViewMinYMargin)];
