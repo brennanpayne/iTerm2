@@ -199,7 +199,7 @@ typedef enum {
 @interface ITAddressBookMgr (Private)
 
 + (id)sharedInstance;
-+ (NSArray*)encodeColor:(NSColor*)origColor;
++ (NSDictionary*)encodeColor:(NSColor*)origColor;
 + (NSColor*)decodeColor:(NSDictionary*)plist;
 + (void)setDefaultsInBookmark:(NSMutableDictionary*)aDict;
 

@@ -4383,6 +4383,16 @@ NSString *sessionsKey = @"sessions";
 
 @implementation PseudoTerminal (Private)
 
+- (BOOL)anyTabIsTmuxTab
+{
+    for (PTYTab *tab in [self tabs]) {
+        if ([tab isTmuxTab]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
 - (int)_screenAtPoint:(NSPoint)p
 {
     int i = 0;
@@ -5780,16 +5790,6 @@ NSString *sessionsKey = @"sessions";
 - (void)window:(NSWindow *)window didDecodeRestorableState:(NSCoder *)state
 {
     [self loadArrangement:[state decodeObjectForKey:@"ptyarrangement"]];
-}
-
-- (BOOL)anyTabIsTmuxTab
-{
-    for (PTYTab *tab in [self tabs]) {
-        if ([tab isTmuxTab]) {
-            return YES;
-        }
-    }
-    return NO;
 }
 
 - (BOOL)allTabsAreTmuxTabs
