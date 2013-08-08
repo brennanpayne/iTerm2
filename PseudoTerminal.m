@@ -368,14 +368,18 @@ NSString *sessionsKey = @"sessions";
             [[self window] setBottomCornerRounded:NO];
     }
     
-    PreferencePanel* pp = [PreferencePanel sharedInstance];
+    PreferencePanel *pp = [PreferencePanel sharedInstance];
+    ITAddressBookMgr *book = [ITAddressBookMgr sharedInstance];
     if ([pp keepWindowOnTop]){
         [[self window] setLevel:NSFloatingWindowLevel];
         NSLog(@"true!");
     }else{
         NSLog(@"false!");
     }
-
+    
+    NSUserDefaults* prefs = [NSUserDefaults standardUserDefaults];
+    NSObject *item = [prefs objectForKey:KEY_NEW_BOOKMARKS];
+    
     // create the tab bar control
     [[self window] setContentView:background_];
     [background_ release];
