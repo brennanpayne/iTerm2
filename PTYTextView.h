@@ -45,6 +45,7 @@
 @class VT100Screen;
 @class ThreeFingerTapGestureRecognizer;
 @class MovingAverage;
+@protocol TrouterDelegate;
 
 // Amount of time to highlight the cursor after beginFindCursor:YES
 static const double kFindCursorHoldTime = 1;
@@ -65,7 +66,7 @@ enum {
 
 @end
 
-@interface PTYTextView : NSView <NSTextInput, PointerControllerDelegate>
+@interface PTYTextView : NSView <NSTextInput, PointerControllerDelegate, TrouterDelegate>
 {
     // This is a flag to let us know whether we are handling this
     // particular drag and drop operation. We are using it because

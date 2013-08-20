@@ -163,8 +163,12 @@ typedef enum { CURSOR_UNDERLINE, CURSOR_VERTICAL, CURSOR_BOX } ITermCursorType;
     BOOL defaultCmdSelection;
 
     // pass on ctrl-click
-    IBOutlet NSButton* passOnControlLeftClick;
+    IBOutlet NSButton* controlLeftClickActsLikeRightClick;
     BOOL defaultPassOnControlLeftClick;
+
+    // Opt-click moves cursor
+    IBOutlet NSButton *optionClickMovesCursor;
+    BOOL defaultOptionClickMovesCursor;
 
     // Zoom vertically only
     IBOutlet NSButton *maxVertically;
@@ -663,6 +667,7 @@ typedef enum {
 // when there was a global growl setting as well as a per-profile setting).
 - (BOOL)enableGrowl;
 - (BOOL)cmdSelection;
+- (BOOL)optionClickMovesCursor;
 - (BOOL)passOnControlLeftClick;
 - (BOOL)maxVertically;
 - (BOOL)closingHotkeySwitchesSpaces;

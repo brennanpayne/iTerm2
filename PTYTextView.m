@@ -317,6 +317,7 @@ static CGFloat PerceivedBrightness(CGFloat r, CGFloat g, CGFloat b) {
     resultMap_ = [[NSMutableDictionary alloc] init];
 
     trouter = [[Trouter alloc] init];
+    trouter.delegate = self;
     trouterDragged = NO;
     workingDirectoryAtLines = [[NSMutableArray alloc] init];
 
@@ -3471,7 +3472,7 @@ static double EuclideanDistance(NSPoint p1, NSPoint p2) {
         DLog(@"is a click in the window");
 
         BOOL altPressed = ([event modifierFlags] & NSAlternateKeyMask) != 0;
-        if (altPressed) {
+        if (altPressed && [[PreferencePanel sharedInstance] optionClickMovesCursor]) {
             // This moves the cursor, but not if mouse reporting is on for button clicks.
             VT100Terminal *terminal = [dataSource terminal];
             switch ([terminal mouseMode]) {
@@ -8819,6 +8820,12 @@ static void PTYShowGlyphsAtPositions(CTFontRef runFont, const CGGlyph *glyphs, N
         }
     }
     return anyBlinkers;
+}
+
+#pragma mark - Trouter Delegate
+
+- (void)trouterLaunchCoprocessWithCommand:(NSString *)command {
+    [_delegate launchCoprocessWithCommand:command];
 }
 
 @end
